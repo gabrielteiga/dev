@@ -1,7 +1,7 @@
 <x-layout :title="$title">
     <x-header :sections='["banner", "about", "projects"]'/>
     <x-section id="banner">
-        <x-banner :role="$role"/>
+        <x-banner :role="$role" :contacts="$contacts"/>
     </x-section>
     <x-section id="about">
         <x-about :about="$about" :stack="$stack" />

@@ -1,5 +1,5 @@
 @props(["id", "slot"])
 
-<section id="{{ $id }}">
+<section class="my-5" id="{{ $id }}">
     {{ $slot }}
 </section >

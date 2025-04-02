@@ -9,10 +9,27 @@ class HomeController extends Controller
     public function index(): View
     {
         $homeVars = [
-            "title" => "Gabriel Teiga",
-            "role"  => "Back-end Developer",
-            "about" => "I am an Administrator and Software Developer who adds value to ideas and products. Experience in developing webpages, APIs and SAAS.",
-            "stack" => [
+            "title"     => "Gabriel Teiga",
+            "role"      => "Back-end Developer",
+            "contacts"  => [
+                0 => [
+                    "icon" => "icons/linkedin.png",
+                    "name" => "LinkedIn",
+                    "link" => "https://www.linkedin.com/in/gabriel-teiga/"
+                ],
+                1 => [
+                    "icon" => "icons/email.png",
+                    "name" => "Email",
+                    "link" => "mailto:gabrielteiga99@gmail.com"
+                ],
+                2 => [
+                    "icon" => "icons/git.png",
+                    "name" => "git",
+                    "link" => "https://github.com/gabrielteiga"
+                ]
+            ],
+            "about"     => "I am an Administrator and Software Developer who adds value to ideas and products. Experience in developing webpages, APIs and SAAS.",
+            "stack"     => [
                 0 => [
                     "language"  => "PHP",
                     "image"     => "stack/php.png"
@@ -45,6 +62,7 @@ class HomeController extends Controller
         return view('index')
             ->with('title', $homeVars['title'])
             ->with('role', $homeVars['role'])
+            ->with('contacts', $homeVars['contacts'])
             ->with('about', $homeVars['about'])
             ->with('stack', $homeVars['stack'])
             ->with('projects', $homeVars['projects']);
